@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "ecobuild",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authecobuilddda2c918",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2023-05-23T23:54:37.957Z"
+}

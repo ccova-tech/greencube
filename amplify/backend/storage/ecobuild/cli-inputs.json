@@ -1,0 +1,16 @@
+{
+  "resourceName": "ecobuild",
+  "policyUUID": "2ca2a557",
+  "bucketName": "ecobuildc1295895a0f043f2a3475853e5478be6",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
