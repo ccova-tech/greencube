@@ -7,12 +7,39 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'bgcolor': {
+            DEFAULT: '#282828',
+            surface: '#1F1F1F',
+        },
+        'primary': {
+            light: '#14d868',
+            DEFAULT: '#0fa84e',
+            dark: '#0a6430',
+        },
+        'secondary': {
+            // light: '#33B1FF',
+            DEFAULT: '#000000',
+        },
+        'destacado': {
+            light: '#bac0bc',
+            DEFAULT: '#16994d',
+        },
+        'onbgcolor': {
+            // light: '#637B9D',
+            DEFAULT: '#FFFFFF',
+            // dark: '#0F172A',
+        },
+        'onprimary': {
+            light: '#f4fffb',
+            DEFAULT: '#FFFFFF',
+            // dark: '#EFF3F8',
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar-hide'),
+  ],
 }
