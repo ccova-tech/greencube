@@ -11,8 +11,8 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: 'EcoBuild',
-  description: 'EcoApp',
+  title: 'GreenCube',
+  description: 'Tecnología para ayudar al planeta',
 }
 
 export default function RootLayout({

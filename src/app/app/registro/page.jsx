@@ -1,9 +1,9 @@
 import React from 'react'
 
-function page() {
+function Registro() {
   return (
     <div>registro</div>
   )
 }
 
-export default page
+export default Registro

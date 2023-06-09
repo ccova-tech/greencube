@@ -7,6 +7,7 @@ import { translationsAwsAuth } from './(utils)/translationsAwsAuth'
 import './(utils)/configureAmplifySSR'
 import ThemeProvider from './(components)/ThemeProvider'
 
+import Link from 'next/link'
 import { Menu } from 'antd'
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons'
 import "@aws-amplify/ui-react/styles.css"
@@ -14,31 +15,50 @@ I18n.putVocabularies(translationsAwsAuth)
 
 const items = [
   {
-    label: 'GreenCube',
+    label: (
+      <Link href="/app">
+        GreenCube
+      </Link>
+    ),
     key: 'greencube',
     icon: <MailOutlined />,
   },
   {
-    label: 'Recolección',
+    label: (
+      <Link href="/app/recoleccion">
+        Recolección
+      </Link>
+    ),
     key: 'recoleccion',
     icon: <AppstoreOutlined />,
   },
   {
-    label: 'Mis Puntos',
+    label: (
+      <Link href="/app/mispuntos">
+        Mis Puntos
+      </Link>
+    ),
     key: 'recompensa',
     icon: <AppstoreOutlined />,
   },
   {
-    label: 'Reciclaje',
+    label: (
+      <Link href="/app/reciclaje">
+        Reciclaje
+      </Link>
+    ),
     key: 'reciclaje',
     icon: <AppstoreOutlined />,
     // disabled: true,
   },
   {
-    label: 'Registro',
+    label: (
+      <Link href="/app/registro">
+        Registro
+      </Link>
+    ),
     key: 'registro',
     icon: <AppstoreOutlined />,
-    // disabled: true,
   },
   {
     label: 'e-learning',
@@ -75,14 +95,6 @@ const items = [
       },
     ],
   },
-  // {
-  //   label: (
-  //     <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-  //       Navigation Four - Link
-  //     </a>
-  //   ),
-  //   key: 'alipay',
-  // },
 ]
 
 export default function LayoutApp({
