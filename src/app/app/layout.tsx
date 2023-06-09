@@ -134,7 +134,7 @@ export default function LayoutApp({
   }
   
   return (
-    <Authenticator className='h-screen' >
+    <Authenticator className='sm:h-screen' >
       {({ signOut, user }) => (
         <ThemeProvider>
           <MenuContext.Provider value={setItemMenu}>
@@ -144,7 +144,7 @@ export default function LayoutApp({
                 selectedKeys={[itemMenu]} 
                 mode="horizontal" 
                 items={items}
-                className='w-[200px] md:w-[650px] m-0' 
+                className='w-[200px] sm:w-[650px] m-0' 
                 />
               <span 
                 onClick={signOut}
@@ -154,7 +154,7 @@ export default function LayoutApp({
                 </span>
               {/* <span className='cursor-pointer' onClick={signOut}>{ user ? `Cerrar cuenta ${user.attributes.email}` : null}</span> */}
             </header>
-            <main className='bg-bgcolor h-[calc(100vh-56px)] p-6'>
+            <main className='bg-bgcolor sm:h-[calc(100vh-56px)] p-6'>
               {children}
             </main>
           </MenuContext.Provider>
