@@ -1,7 +1,8 @@
-import LayoutApp from './(components)/LayoutApp';
+// import LayoutApp from './(components)/LayoutApp';
 
 export default function page() {
   return (
-    <LayoutApp>page</LayoutApp>
+    // <LayoutApp>page</LayoutApp>
+    <div>Hola</div>
   )
 }

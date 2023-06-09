@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-bgcolor text-onbgcolor`}>
+      <body className={`${roboto.className} bg-primary text-onbgcolor`}>
         <RootStyleRegistry>
           {children}
         </RootStyleRegistry>
