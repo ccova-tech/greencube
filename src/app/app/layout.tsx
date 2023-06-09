@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
 import { Auth, Hub, I18n } from 'aws-amplify'
 import { Authenticator } from '@aws-amplify/ui-react'
 import { translationsAwsAuth } from './(utils)/translationsAwsAuth'
@@ -9,9 +9,11 @@ import ThemeProvider from './(components)/ThemeProvider'
 
 import Link from 'next/link'
 import { Menu } from 'antd'
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons'
+import { CodepenOutlined, ApiOutlined, EnvironmentOutlined, SmileOutlined, SyncOutlined, SettingOutlined } from '@ant-design/icons'
 import "@aws-amplify/ui-react/styles.css"
 I18n.putVocabularies(translationsAwsAuth)
+
+ export const MenuContext = createContext(null)
 
 const items = [
   {
@@ -21,35 +23,7 @@ const items = [
       </Link>
     ),
     key: 'greencube',
-    icon: <MailOutlined />,
-  },
-  {
-    label: (
-      <Link href="/app/recoleccion">
-        Recolección
-      </Link>
-    ),
-    key: 'recoleccion',
-    icon: <AppstoreOutlined />,
-  },
-  {
-    label: (
-      <Link href="/app/mispuntos">
-        Mis Puntos
-      </Link>
-    ),
-    key: 'recompensa',
-    icon: <AppstoreOutlined />,
-  },
-  {
-    label: (
-      <Link href="/app/reciclaje">
-        Reciclaje
-      </Link>
-    ),
-    key: 'reciclaje',
-    icon: <AppstoreOutlined />,
-    // disabled: true,
+    icon: <CodepenOutlined />,
   },
   {
     label: (
@@ -58,7 +32,35 @@ const items = [
       </Link>
     ),
     key: 'registro',
-    icon: <AppstoreOutlined />,
+    icon: <ApiOutlined />,
+  },
+  {
+    label: (
+      <Link href="/app/recoleccion">
+        Recolección
+      </Link>
+    ),
+    key: 'recoleccion',
+    icon: <EnvironmentOutlined />,
+  },
+  {
+    label: (
+      <Link href="/app/mispuntos">
+        Mis Puntos
+      </Link>
+    ),
+    key: 'mispuntos',
+    icon: <SmileOutlined />,
+  },
+  {
+    label: (
+      <Link href="/app/reciclaje">
+        Reciclaje
+      </Link>
+    ),
+    key: 'reciclaje',
+    icon: <SyncOutlined />,
+    // disabled: true,
   },
   {
     label: 'e-learning',
@@ -104,7 +106,7 @@ export default function LayoutApp({
 }) {
 
   const [signedUser, setSignedUser] = useState(false)
-  const [itemMenu, setItemMenu] = useState('mail')
+  const [itemMenu, setItemMenu] = useState('greencube')
 
   useEffect(() => {
     authListener()
@@ -135,25 +137,27 @@ export default function LayoutApp({
     <Authenticator className='h-screen' >
       {({ signOut, user }) => (
         <ThemeProvider>
-          <header className='h-14 bg-secondary flex justify-between items-center px-6 w-full'>
-            <Menu 
-              onClick={handleMenuHeader} 
-              selectedKeys={[itemMenu]} 
-              mode="horizontal" 
-              items={items}
-              className='w-[200px] md:w-[650px] m-0' 
-            />
-            <span 
-              onClick={signOut}
-              className='cursor-pointer text-destacado hover:text-primary'
-            > 
-                Cerrar Sesión
-              </span>
-            {/* <span className='cursor-pointer' onClick={signOut}>{ user ? `Cerrar cuenta ${user.attributes.email}` : null}</span> */}
-          </header>
-          <main className='bg-bgcolor h-[calc(100vh-56px)] p-6'>
-            {children}
-          </main>
+          <MenuContext.Provider value={setItemMenu}>
+            <header className='h-14 bg-secondary flex justify-between items-center px-6 w-full'>
+              <Menu 
+                onClick={handleMenuHeader} 
+                selectedKeys={[itemMenu]} 
+                mode="horizontal" 
+                items={items}
+                className='w-[200px] md:w-[650px] m-0' 
+                />
+              <span 
+                onClick={signOut}
+                className='cursor-pointer text-destacado hover:text-primary'
+                > 
+                  Cerrar Sesión
+                </span>
+              {/* <span className='cursor-pointer' onClick={signOut}>{ user ? `Cerrar cuenta ${user.attributes.email}` : null}</span> */}
+            </header>
+            <main className='bg-bgcolor h-[calc(100vh-56px)] p-6'>
+              {children}
+            </main>
+          </MenuContext.Provider>
         </ThemeProvider>
       )}
     </Authenticator>
