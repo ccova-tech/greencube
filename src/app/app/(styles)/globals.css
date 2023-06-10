@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.ant-input{
+  background-color: transparent;
+}
+
+.ant-select-selection-search-input:focus{
+  box-shadow: none;
+}
+
+.ant-form-item-control-input-content{
+  width: 100px
+}
+
+.amplify-button{
+  background-color: #14d868;
+  color: #000;
+}

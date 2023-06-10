@@ -1,29 +1,41 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getTodo = /* GraphQL */ `
-  query GetTodo($id: ID!) {
-    getTodo(id: $id) {
+export const getPuntoRecoleccion = /* GraphQL */ `
+  query GetPuntoRecoleccion($id: ID!) {
+    getPuntoRecoleccion(id: $id) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const listTodos = /* GraphQL */ `
-  query ListTodos(
-    $filter: ModelTodoFilterInput
+export const listPuntoRecoleccions = /* GraphQL */ `
+  query ListPuntoRecoleccions(
+    $filter: ModelPuntoRecoleccionFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPuntoRecoleccions(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
       items {
         id
-        name
-        description
+        puntoRecoleccion
+        nombre
+        direccionComuna
+        direccionCalle
+        direccionNumero
+        telefono
         createdAt
         updatedAt
         owner

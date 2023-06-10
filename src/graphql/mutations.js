@@ -1,45 +1,57 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createPuntoRecoleccion = /* GraphQL */ `
+  mutation CreatePuntoRecoleccion(
+    $input: CreatePuntoRecoleccionInput!
+    $condition: ModelPuntoRecoleccionConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createPuntoRecoleccion(input: $input, condition: $condition) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updatePuntoRecoleccion = /* GraphQL */ `
+  mutation UpdatePuntoRecoleccion(
+    $input: UpdatePuntoRecoleccionInput!
+    $condition: ModelPuntoRecoleccionConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updatePuntoRecoleccion(input: $input, condition: $condition) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+export const deletePuntoRecoleccion = /* GraphQL */ `
+  mutation DeletePuntoRecoleccion(
+    $input: DeletePuntoRecoleccionInput!
+    $condition: ModelPuntoRecoleccionConditionInput
   ) {
-    deleteTodo(input: $input, condition: $condition) {
+    deletePuntoRecoleccion(input: $input, condition: $condition) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner

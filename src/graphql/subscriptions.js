@@ -1,45 +1,57 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateTodo = /* GraphQL */ `
-  subscription OnCreateTodo(
-    $filter: ModelSubscriptionTodoFilterInput
+export const onCreatePuntoRecoleccion = /* GraphQL */ `
+  subscription OnCreatePuntoRecoleccion(
+    $filter: ModelSubscriptionPuntoRecoleccionFilterInput
     $owner: String
   ) {
-    onCreateTodo(filter: $filter, owner: $owner) {
+    onCreatePuntoRecoleccion(filter: $filter, owner: $owner) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const onUpdateTodo = /* GraphQL */ `
-  subscription OnUpdateTodo(
-    $filter: ModelSubscriptionTodoFilterInput
+export const onUpdatePuntoRecoleccion = /* GraphQL */ `
+  subscription OnUpdatePuntoRecoleccion(
+    $filter: ModelSubscriptionPuntoRecoleccionFilterInput
     $owner: String
   ) {
-    onUpdateTodo(filter: $filter, owner: $owner) {
+    onUpdatePuntoRecoleccion(filter: $filter, owner: $owner) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner
     }
   }
 `;
-export const onDeleteTodo = /* GraphQL */ `
-  subscription OnDeleteTodo(
-    $filter: ModelSubscriptionTodoFilterInput
+export const onDeletePuntoRecoleccion = /* GraphQL */ `
+  subscription OnDeletePuntoRecoleccion(
+    $filter: ModelSubscriptionPuntoRecoleccionFilterInput
     $owner: String
   ) {
-    onDeleteTodo(filter: $filter, owner: $owner) {
+    onDeletePuntoRecoleccion(filter: $filter, owner: $owner) {
       id
-      name
-      description
+      puntoRecoleccion
+      nombre
+      direccionComuna
+      direccionCalle
+      direccionNumero
+      telefono
       createdAt
       updatedAt
       owner
