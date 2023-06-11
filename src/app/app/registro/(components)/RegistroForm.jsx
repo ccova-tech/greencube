@@ -1,21 +1,11 @@
 'use client'
 
-import { useEffect } from 'react'
 import { usePuntosDispatch } from '../(api)/ContextRegistro'
 import { Button, Form, Input, Select } from 'antd'
 
 export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData, statusForm, setStatusForm }) {
   const [form] = Form.useForm()
   const dispatch = usePuntosDispatch()  
-
-  // useEffect(() => {
-  //   if(statusForm === 'update'){
-  //     setStatusForm('update')
-  //   } else {
-  //     setStatusForm('create')
-  //   }
-  // }, [])
-  
 
   const handleCancel = () => {
     setAgregarNuevo(false)
@@ -32,7 +22,6 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
   }
 
   const onFinish = (values) => {
-    // console.log(dispatch)
     if( statusForm === 'create'){
       dispatch({
         type: 'create',

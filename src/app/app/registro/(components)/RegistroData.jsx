@@ -35,7 +35,7 @@ export default function RegistroData({dataRegistro, setAgregarNuevo, setUpdateDa
       {
         data ? (
           data.map( item => (
-            <div key={item.id} className='mt-8 bg-primary rounded-md h-24 p-4 flex justify-between items-center'>
+            <div key={item.id} className='mt-8 bg-primary rounded-md h-24 p-4 flex justify-between items-center select-none'>
               <div className='flex items-center'>
                 <div className='w-16 h-16 mr-4 bg-primary-dark hidden sm:flex justify-center items-center rounded'></div>
                 <div className='flex flex-col'>
