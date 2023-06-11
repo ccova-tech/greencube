@@ -2,6 +2,7 @@
 
 import { usePuntosRecoleccion } from '../registro/(api)/ContextRegistro'
 import AccionesSolicitar from './(components)/AccionesSolicitar';
+import Map from './(components)/Map';
 
 function Recoleccion() {
   const dataPuntos = usePuntosRecoleccion()
@@ -12,7 +13,7 @@ function Recoleccion() {
         <AccionesSolicitar dataPuntos={dataPuntos}/>
       </div>
       <div className='rounded-lg bg-bgcolor w-full sm:h-full sm:grow sm:overflow-y-auto p-4'>
-        mapa
+        <Map address='Tobalaba 1499, 7510330 Providencia, Región Metropolitana' className='h-full' />
       </div>
     </div> 
   )

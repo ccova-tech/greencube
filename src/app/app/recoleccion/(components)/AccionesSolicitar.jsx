@@ -37,7 +37,7 @@ function AccionesSolicitar({dataPuntos}) {
       }
       {
         solicitar && (
-          data.map( item => (
+          data?.map( item => (
             <div key={item.id} className='mt-8 bg-primary rounded-md p-4 flex flex-col items-center select-none' >
               <div className='flex flex-col'>
                 <h3 className='font-bold text-secondary uppercase truncate text-center'>{item.puntoRecoleccion} - {item.nombre}</h3>
