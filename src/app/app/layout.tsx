@@ -6,6 +6,7 @@ import { Authenticator } from '@aws-amplify/ui-react'
 import { translationsAwsAuth } from './(utils)/translationsAwsAuth'
 import './(utils)/configureAmplifySSR'
 import ThemeProvider from './(components)/ThemeProvider'
+import ContextRegistro from '@/app/app/registro/(api)/ContextRegistro';
 
 import Link from 'next/link'
 import { Menu } from 'antd'
@@ -137,27 +138,29 @@ export default function LayoutApp({
     <Authenticator className='sm:h-screen' >
       {({ signOut, user }) => (
         <ThemeProvider>
-          <MenuContext.Provider value={setItemMenu}>
-            <header className='h-14 bg-secondary flex justify-between items-center px-6 w-full'>
-              <Menu 
-                onClick={handleMenuHeader} 
-                selectedKeys={[itemMenu]} 
-                mode="horizontal" 
-                items={items}
-                className='w-[200px] sm:w-[700px] m-0' 
-                />
-              <span 
-                onClick={signOut}
-                className='cursor-pointer text-destacado hover:text-primary'
-                > 
-                  Cerrar Sesión
-                </span>
-              {/* <span className='cursor-pointer' onClick={signOut}>{ user ? `Cerrar cuenta ${user.attributes.email}` : null}</span> */}
-            </header>
-            <main className='bg-bgcolor-surface sm:h-[calc(100vh-56px)] p-6'>
-              {children}
-            </main>
-          </MenuContext.Provider>
+          <ContextRegistro>
+            <MenuContext.Provider value={setItemMenu}>
+              <header className='h-14 bg-secondary flex justify-between items-center px-6 w-full'>
+                <Menu 
+                  onClick={handleMenuHeader} 
+                  selectedKeys={[itemMenu]} 
+                  mode="horizontal" 
+                  items={items}
+                  className='w-[200px] sm:w-[700px] m-0' 
+                  />
+                <span 
+                  onClick={signOut}
+                  className='cursor-pointer text-destacado hover:text-primary'
+                  > 
+                    Cerrar Sesión
+                  </span>
+                {/* <span className='cursor-pointer' onClick={signOut}>{ user ? `Cerrar cuenta ${user.attributes.email}` : null}</span> */}
+              </header>
+              <main className='bg-bgcolor-surface sm:h-[calc(100vh-56px)] p-6'>
+                {children}
+              </main>
+            </MenuContext.Provider>
+          </ContextRegistro>
         </ThemeProvider>
       )}
     </Authenticator>

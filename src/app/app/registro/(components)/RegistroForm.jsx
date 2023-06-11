@@ -1,13 +1,27 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { usePuntosDispatch } from '../(api)/ContextRegistro'
 import { Button, Form, Input, Select } from 'antd'
 
-export default function RegistroForm() {
-  const [agregarNuevo, setAgregarNuevo] = useState(false)
+export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData, statusForm, setStatusForm }) {
   const [form] = Form.useForm()
-  const dispatch = usePuntosDispatch()
+  const dispatch = usePuntosDispatch()  
+
+  // useEffect(() => {
+  //   if(statusForm === 'update'){
+  //     setStatusForm('update')
+  //   } else {
+  //     setStatusForm('create')
+  //   }
+  // }, [])
+  
+
+  const handleCancel = () => {
+    setAgregarNuevo(false)
+    form.resetFields() 
+    setStatusForm('create')
+  }
 
   const onFinishFailed = (errorInfo) => {
     console.log('error submit carga de datos:', errorInfo)
@@ -19,11 +33,21 @@ export default function RegistroForm() {
 
   const onFinish = (values) => {
     // console.log(dispatch)
-    dispatch({
-      type: 'create',
-      payload: {...values}
-    })
+    if( statusForm === 'create'){
+      dispatch({
+        type: 'create',
+        payload: {...values}
+      })
+    } else if ( statusForm === 'update'){
+      dispatch({
+        type: 'update',
+        id: updateData.id,
+        payload: {...values}
+      })
+    }
     form.resetFields()
+    setAgregarNuevo(false)
+    setStatusForm('create')
   }
   
   return (
@@ -34,7 +58,7 @@ export default function RegistroForm() {
             Agregar Nuevo
           </Button>
         ) : (
-          <Button type='primary' ghost size='large' className='w-full font-bold' onClick={ () => {setAgregarNuevo(false); form.resetFields()} } >
+          <Button type='primary' ghost size='large' className='w-full font-bold' onClick={ handleCancel } >
             Cancelar
           </Button>
         )
@@ -54,6 +78,7 @@ export default function RegistroForm() {
             <Form.Item
               label="Nuevo Punto de Recolección"
               name="puntoRecoleccion"
+              initialValue={statusForm === "update" ? updateData.puntoRecoleccion : ""}
               rules={[
                 {
                   required: true,
@@ -62,6 +87,7 @@ export default function RegistroForm() {
               ]}
             >
               <Select
+                size='large'
                 options={[
                   {
                     value: 'greencube',
@@ -82,6 +108,7 @@ export default function RegistroForm() {
             <Form.Item
               label="Nombre del Punto"
               name="nombre"
+              initialValue={statusForm === "update" ? updateData.nombre : ""}
               rules={[
                 {
                   required: true,
@@ -95,6 +122,7 @@ export default function RegistroForm() {
             <Form.Item
               label="Dirección - Comuna"
               name="direccionComuna"
+              initialValue={statusForm === "update" ? updateData.direccionComuna : ""}
               rules={[
                 {
                   required: true,
@@ -108,6 +136,7 @@ export default function RegistroForm() {
             <Form.Item
               label="Dirección - Calle"
               name="direccionCalle"
+              initialValue={statusForm === "update" ? updateData.direccionCalle : ""}
               rules={[
                 {
                   required: true,
@@ -121,6 +150,7 @@ export default function RegistroForm() {
             <Form.Item
               label="Dirección - Número"
               name="direccionNumero"
+              initialValue={statusForm === "update" ? updateData.direccionNumero : ""}
               rules={[
                 {
                   required: true,
@@ -134,6 +164,7 @@ export default function RegistroForm() {
             <Form.Item
               label="Teléfono"
               name="telefono"
+              initialValue={statusForm === "update" ? updateData.telefono : ""}
               rules={[
                 {
                   required: true,
@@ -146,7 +177,7 @@ export default function RegistroForm() {
 
             <Form.Item>
               <Button type="primary" ghost size='large' className='w-full font-bold' htmlType="submit">
-                Registrar
+                { statusForm === 'update' ? 'Actualizar' : 'Registrar' }
               </Button>
             </Form.Item>
           </Form>

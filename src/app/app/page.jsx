@@ -39,7 +39,7 @@ export default function App() {
         <div className='group w-64 h-80 hover:shadow-card transition-all cursor-pointer bg-secondary rounded-lg overflow-hidden border border-solid border-secondary'>
           <div className='h-2/3 flex flex-col justify-center items-center'>
             <SmileOutlined className='text-7xl text-destacado group-hover:text-primary'/>
-            <h2 className='font-bold text-lg text-destacado group-hover:text-primary mt-4'>Mis Puntos</h2>
+            <h2 className='font-bold text-lg text-destacado group-hover:text-primary mt-4'>GreenPoints</h2>
           </div>
           <div className='h-1/3 bg-destacado group-hover:bg-primary flex justify-center items-center p-4'>
             <p className='text-center text-secondary text-base font'>Sistema de recompensa por tus aportes y donaciones</p>
