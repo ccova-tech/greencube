@@ -11,15 +11,15 @@ import '@/app/app/(utils)/configureAmplifySSR.js'
 
 const ContextData = createContext(null)
 const DispatchContext = createContext(null)
-let initialState;
+let initialState = [];
 
-(async function(){
-    const result = await API.graphql({
-        query: listPuntoRecoleccions,
-        authMode: GRAPHQL_AUTH_MODE.AMAZON_COGNITO_USER_POOLS
-    })
-    initialState =  result.data.listPuntoRecoleccions.items
-})()
+// (async function(){
+//     const result = await API.graphql({
+//         query: listPuntoRecoleccions,
+//         authMode: GRAPHQL_AUTH_MODE.AMAZON_COGNITO_USER_POOLS
+//     })
+//     initialState =  result.data.listPuntoRecoleccions.items
+// })()
 
 export default function ContextRegistro({children}) { // cambiar nombre
   const [data, dispatch] = useReducer(functionReducer, initialState)

@@ -1,4 +1,5 @@
-import { RootStyleRegistry } from './app/(components)/RootStyleRegistry';
+import './app/(utils)/configureAmplifySSR'
+import { RootStyleRegistry } from './app/(components)/RootStyleRegistry'
 
 import './app/(styles)/globals.css'
 import { Roboto } from 'next/font/google'

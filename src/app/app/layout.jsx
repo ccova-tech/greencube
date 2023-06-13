@@ -14,7 +14,7 @@ import { CodepenOutlined, ApiOutlined, EnvironmentOutlined, SmileOutlined, SyncO
 import "@aws-amplify/ui-react/styles.css"
 I18n.putVocabularies(translationsAwsAuth)
 
- export const MenuContext = createContext(null)
+export const MenuContext = createContext(null)
 
 const items = [
   {
@@ -102,8 +102,6 @@ const items = [
 
 export default function LayoutApp({
   children,
-}: {
-  children: React.ReactNode
 }) {
 
   const [signedUser, setSignedUser] = useState(false)
