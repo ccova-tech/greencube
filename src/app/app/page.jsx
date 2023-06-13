@@ -1,12 +1,20 @@
 'use client'
 
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import Link from 'next/link'
 import { MenuContext } from './layout';
+import { usePuntosDispatch } from './registro/(api)/ContextRegistro';
 import { ApiOutlined, EnvironmentOutlined, SmileOutlined, SyncOutlined } from '@ant-design/icons'
 
 export default function App() {
   const setItemMenu = useContext(MenuContext)
+  const dispatch = usePuntosDispatch()
+
+  useEffect( () => {
+    dispatch({
+      type: 'getdata'
+    })
+  }, [])
 
   return (
     <div className='sm:h-full flex flex-wrap justify-center items-center gap-10 sm:bg-primary rounded-lg'>

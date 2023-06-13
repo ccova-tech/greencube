@@ -107,6 +107,16 @@ async function functionReducer(data, action) {
       const newData = await newState.data.listPuntoRecoleccions.items
       return newData
     }
+    case 'getdata': {
+      const newState = await SSR.API.graphql({
+        query: listPuntoRecoleccions,
+        authMode: GRAPHQL_AUTH_MODE.AMAZON_COGNITO_USER_POOLS
+      });
+
+      const newData = await newState.data.listPuntoRecoleccions.items
+      console.log(newData)
+      return newData
+    }
     default: {
       throw Error('dispath desconocida - ActivosContext: ' + action.type); // cambiar nombre
     }
