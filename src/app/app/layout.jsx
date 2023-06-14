@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect, createContext } from 'react'
-import { Auth, Hub, I18n } from 'aws-amplify'
+import { Auth, Hub, I18n, Amplify } from 'aws-amplify'
 import { Authenticator } from '@aws-amplify/ui-react'
 import { translationsAwsAuth } from './(utils)/translationsAwsAuth'
-import './(utils)/configureAmplifySSR'
+// import './(utils)/configureAmplifySSR'
+import myAppConfig from './(utils)/amplifyConfigure';
 import ThemeProvider from './(components)/ThemeProvider'
 import ContextRegistro from '@/app/app/registro/(api)/ContextRegistro';
 
@@ -12,7 +13,9 @@ import Link from 'next/link'
 import { Menu } from 'antd'
 import { CodepenOutlined, ApiOutlined, EnvironmentOutlined, SmileOutlined, SyncOutlined, SettingOutlined } from '@ant-design/icons'
 import "@aws-amplify/ui-react/styles.css"
+
 I18n.putVocabularies(translationsAwsAuth)
+Amplify.configure(myAppConfig)
 
 export const MenuContext = createContext(null)
 

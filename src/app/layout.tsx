@@ -1,8 +1,10 @@
-import './app/(utils)/configureAmplifySSR'
+// import './app/(utils)/configureAmplifySSR'
 import { RootStyleRegistry } from './app/(components)/RootStyleRegistry'
-
 import './app/(styles)/globals.css'
 import { Roboto } from 'next/font/google'
+import { Amplify } from 'aws-amplify'
+import myAppConfig from './app/(utils)/amplifyConfigure'
+Amplify.configure(myAppConfig)
 
 const roboto = Roboto({
   weight: ["400", "700"],

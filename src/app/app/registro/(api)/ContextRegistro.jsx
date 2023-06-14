@@ -1,13 +1,14 @@
 'use client'
 
 import { createContext, useContext, useReducer } from 'react'
-import { API, withSSRContext } from 'aws-amplify'
+import { API, withSSRContext, Amplify } from 'aws-amplify'
 import { GRAPHQL_AUTH_MODE } from '@aws-amplify/api'
 import { listPuntoRecoleccions } from '@/graphql/queries'
 import * as mutations from '@/graphql/mutations'
-
-import '@/app/app/(utils)/configureAmplifySSR.js'
+import myAppConfig from '../../(utils)/amplifyConfigure';
+// import '@/app/app/(utils)/configureAmplifySSR.js'
 // import { headers } from 'next/headers'
+Amplify.configure(myAppConfig)
 
 const ContextData = createContext(null)
 const DispatchContext = createContext(null)
