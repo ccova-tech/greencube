@@ -136,7 +136,7 @@ export default function LayoutApp({
   }
   
   return (
-    <Authenticator className='sm:h-screen' >
+    <Authenticator className='sm:h-screen' hideSignUp={true}>
       {({ signOut, user }) => (
         <ThemeProvider>
           <ContextRegistro>
@@ -148,6 +148,7 @@ export default function LayoutApp({
                   mode="horizontal" 
                   items={items}
                   className='w-[200px] sm:w-[700px] m-0' 
+                  key={items.key}
                   />
                 <span 
                   onClick={signOut}
