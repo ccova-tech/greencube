@@ -20,15 +20,15 @@ Amplify.configure(myAppConfig)
 export const MenuContext = createContext(null)
 
 const items = [
-  {
-    label: (
-      <Link href="/app">
-        GreenCube
-      </Link>
-    ),
-    key: 'greencube',
-    icon: <CodepenOutlined />,
-  },
+  // {
+  //   label: (
+  //     <Link href="/app">
+  //       GreenCube
+  //     </Link>
+  //   ),
+  //   key: 'greencube',
+  //   icon: <CodepenOutlined />,
+  // },
   {
     label: (
       <Link href="/app/registro">
