@@ -4,7 +4,7 @@ export default function Hero(){
   return (
     <div className='h-[90vh] flex justify-center'>
       <div className='max-w-7xl w-full lg:w-[1280px] flex lg:flex-row flex-col lg:h-full flex-wrap'>
-        <div className='p-8 lg:p-0 lg:w-1/2 h-1/2 lg:h-full flex flex-col justify-center text-secondary font-semibold text-center'>
+        <div className='p-8 lg:p-0 lg:w-1/2 h-1/2 lg:h-full flex flex-col justify-center text-secondary font-semibold text-center lg:text-left'>
           <h2 className='text-lg lg:text-xl lg:ml-2 mb-2 text-primary-dark'>Proyecto de Economía Circular</h2>
           <h1 className='text-6xl lg:text-8xl'>GreenCube</h1>
           <h3 className='text-xl lg:text-2xl mt-10 lg:mt-24 lg:ml-2 text-bgcolor'>Transformamos residuos de Cabello, Plástico y Café.</h3>
