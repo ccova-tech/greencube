@@ -151,7 +151,7 @@ export default function LayoutApp({
                   key={items.key}
                   />
                 <span 
-                  onClick={signOut}
+                  onClick={()=>{signOut(); window.location='/'}}
                   className='cursor-pointer text-destacado hover:text-primary'
                   > 
                     Cerrar Sesión

@@ -91,6 +91,7 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
                     label: 'Sucursal',
                   },
                 ]}
+                className='focus:ring-primary focus:border-primary'
               />
             </Form.Item>
 
@@ -105,7 +106,7 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
                 },
               ]}
             >
-              <Input />
+              <Input className='focus:ring-primary focus:border-primary' />
             </Form.Item>
 
             <Form.Item
@@ -119,7 +120,7 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
                 },
               ]}
             >
-              <Input />
+              <Input className='focus:ring-primary focus:border-primary' />
             </Form.Item>
 
             <Form.Item
@@ -133,7 +134,7 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
                 },
               ]}
             >
-              <Input />
+              <Input className='focus:ring-primary focus:border-primary' />
             </Form.Item>
 
             <Form.Item
@@ -147,7 +148,7 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
                 },
               ]}
             >
-              <Input />
+              <Input className='focus:ring-primary focus:border-primary' />
             </Form.Item>
 
             <Form.Item
@@ -161,7 +162,7 @@ export default function RegistroForm({ agregarNuevo, setAgregarNuevo, updateData
                 },
               ]}
             >
-              <Input addonBefore='+56' placeholder='900001111' type='tel' />
+              <Input addonBefore='+56' placeholder='900001111' type='tel' className='focus:ring-primary focus:border-primary' />
             </Form.Item>
 
             <Form.Item>

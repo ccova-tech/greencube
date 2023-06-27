@@ -19,7 +19,7 @@ export default function Header() {
     <header className="h-14 bg-secondary text-onbgcolor flex items-center">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:p-0 lg:px-8 w-full" aria-label="Global">
         <a href="#" className="-m-1.5 p-1.5">
-          <span>GreenCube</span>
+          <span className='font-bold text-primary'>GreenCube</span>
         </a>
         <div className="flex lg:hidden">
           <button
