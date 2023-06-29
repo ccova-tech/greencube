@@ -3,11 +3,11 @@ import React from 'react'
 
 const collections = [
   {
-    name: "Perfiles WPC",
+    name: 'Baldosas WPC',
     href: '#',
-    imageSrc: '/barner5.jpg',
-    imageSrc2: '/barner55.jpg',
-    imageAlt: 'Perfiles WPC',
+    imageSrc: '/barner4.jpg',
+    imageSrc2: '/barner44.jpg',
+    imageAlt: 'Baldosas WPC',
   },
   {
     name: "Revestimientos WPC",
@@ -17,11 +17,11 @@ const collections = [
     imageAlt: 'Revestimientos WPC',
   },
   {
-    name: 'Baldosas WPC',
+    name: "Perfiles WPC",
     href: '#',
-    imageSrc: '/barner4.jpg',
-    imageSrc2: '/barner44.jpg',
-    imageAlt: 'Baldosas WPC',
+    imageSrc: '/barner5.jpg',
+    imageSrc2: '/barner55.jpg',
+    imageAlt: 'Perfiles WPC',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function EcoProducts() {
               >
                 <div>
                   <div aria-hidden="true" className="lg:absolute inset-0 overflow-hidden rounded-lg">
-                    <div className="lg:absolute inset-0 overflow-hidden transition-all group">
+                    <div className="lg:absolute inset-0 overflow-hidden transition-all group relative">
                       <Image
                         src={collection.imageSrc}
                         alt={collection.imageAlt}
@@ -99,7 +99,7 @@ export default function EcoProducts() {
                       <Image
                         src={collection.imageSrc2}
                         alt={collection.imageAlt}
-                        className="top-0 h-full w-full object-cover object-center absolute invisible group-hover:visible max-sm:aspect-h-1 max-sm:aspect-w-2 max-sm:overflow-hidden"
+                        className="bottom-0 absolute h-full w-full object-cover object-center invisible group-hover:visible max-sm:overflow-hidden"
                         width={500}
                         height={500}
                       />
@@ -126,7 +126,7 @@ export default function EcoProducts() {
         </section>
       </div>
 
-      <div className="bg-primary">
+      <div className="bg-primary mb-24 lg:mb-0">
         <div className="mx-auto max-w-7xl px-4 lg:py-16 sm:px-6 sm:py-24 lg:px-8">
           {/* <div className="sm:flex sm:items-baseline sm:justify-between">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>

@@ -16,6 +16,7 @@ export default function Home() {
       {/* <main className='bg-primary h-screen w-full flex flex-col items-center justify-center text-black'>
         <h1 className='text-2xl font-bold'>GreenCube</h1>
       </main> */}
+      <div className='h-14 bg-secondary text-secondary'>.</div>
     </div>
   )
 }

@@ -107,8 +107,8 @@ export default function AppMobile() {
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? 'border-secondary text-onbgcolor'
-                              : 'border-transparent text-secondary hover:border-bgcolor hover:text-bgcolor',
+                              ? 'border-0 border-b border-secondary text-onbgcolor ring-0 outline-0'
+                              : 'border-0 border-b border-transparent text-secondary hover:border-bgcolor hover:text-bgcolor right-0 outline-0',
                             'whitespace-nowrap border-b-2 py-6 text-lg lg:text-xl font-semibold'
                           )
                         }
