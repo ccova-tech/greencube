@@ -11,7 +11,7 @@ export default function Hero(){
           <h3 className='text-xl lg:text-2xl mt-4 lg:ml-2'>Fabricamos productos de alta calidad para los sectores agrícola y construcción.</h3>
         </div>
         <div className='lg:w-1/2 h-1/2 lg:h-full flex justify-center items-center'>
-          <Image src='/herologo.png' alt='earth greencube' width={600} height={600} className='h-[400px] lg:h-[600px] w-[400px] lg:w-[600px]'/>
+          <Image src='/herologomin.png' alt='earth greencube' width={600} height={600} className='h-[400px] lg:h-[600px] w-[400px] lg:w-[600px]'/>
         </div>
       </div>
     </div>
