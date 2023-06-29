@@ -48,19 +48,21 @@ export default function EcoProducts() {
 
         <div className="relative mx-auto max-w-3xl px-4 pb-96 text-center sm:px-6 sm:pb-0 lg:px-8">
           {/* Background image and overlap */}
-          {/* <div aria-hidden="true" className="absolute inset-0 flex flex-col sm:hidden">
+          <div aria-hidden="true" className="absolute inset-0 flex flex-col sm:hidden">
             <div className="relative w-full flex-1 bg-gray-800">
               <div className="absolute inset-0 overflow-hidden">
-                <img
-                  src="https://tailwindui.com/img/ecommerce-images/home-page-04-hero-full-width.jpg"
+                <Image
+                  src="/maderaygrama.jpg"
                   alt=""
                   className="h-full w-full object-cover object-center"
+                  width={2000}
+                  height={1000}
                 />
               </div>
               <div className="absolute inset-0 bg-gray-900 opacity-50" />
             </div>
             <div className="h-48 w-full bg-primary" />
-          </div> */}
+          </div>
           <div className="relative py-32">
             <h1 className="text-4xl font-bold tracking-tight text-onprimary-light sm:text-5xl md:text-7xl">Eco Productos</h1>
             {/* <div className="mt-4 sm:mt-6">
@@ -239,12 +241,12 @@ export default function EcoProducts() {
             </div>
           </div>
 
-          <div className="mt-6 sm:hidden">
+          {/* <div className="mt-6 sm:hidden">
             <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
               Browse all categories
               <span aria-hidden="true"> &rarr;</span>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

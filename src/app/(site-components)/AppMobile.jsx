@@ -12,7 +12,7 @@ const tabs = [
         name: 'Recicla',
         description:
           'No botes tus residuos de cabello, plástico y/o café. Conviértelos en materia prima para fabricar productos de alta calidad.',
-        imageSrc: '/greencube5.svg',
+        imageSrc: '/gc1.jpg',
         imageAlt: 'Recicla',
       },
     ],
@@ -24,7 +24,7 @@ const tabs = [
         name: 'Gana Puntos',
         description:
           'Entrega tus residuos a través de nuestra app y gana GreenPoints que podrás intercambiar por beneficios con nuestros aliados.',
-        imageSrc: '/greencube2.svg',
+        imageSrc: '/gc2.jpg',
         imageAlt:
           'Gana Puntos',
       },
@@ -37,7 +37,7 @@ const tabs = [
         name: 'Obtén Beneficios',
         description:
           "Acumula GreenPoints y cambialos por beneficios, descuentos y ofertas en las tiendas de nuestros aliados.",
-        imageSrc: '/greencube6.svg',
+        imageSrc: '/gc3.jpg',
         imageAlt: 'Obtén Beneficios',
       },
     ],
@@ -49,7 +49,7 @@ const tabs = [
         name: "Salva al Planeta",
         description:
           'Deja menos huella. Al descargar y utilizar nuestra App contribuyes a reducir los efectos causados por la contaminación y el cambio climático.',
-        imageSrc: '/greencube4.svg',
+        imageSrc: '/gc4.jpg',
         imageAlt: 'Salva al Planeta',
       },
     ],
