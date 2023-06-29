@@ -134,6 +134,11 @@ export default function LayoutApp({
   const handleMenuHeader = (e) => {
     setItemMenu(e.key)
   }
+
+  const handleSignOut = async (signOut) => {
+    await signOut() 
+    window.location='/'
+  }
   
   return (
     <Authenticator className='sm:h-screen' hideSignUp={true}>
@@ -151,7 +156,7 @@ export default function LayoutApp({
                   key={items.key}
                   />
                 <span 
-                  onClick={()=>{signOut(); window.location='/'}}
+                  onClick={ () => handleSignOut(signOut) }
                   className='cursor-pointer text-destacado hover:text-primary'
                   > 
                     Cerrar Sesión
