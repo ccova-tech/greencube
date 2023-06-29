@@ -84,22 +84,22 @@ export default function EcoProducts() {
             {collections.map((collection) => (
               <div
                 key={collection.name}
-                className="group relative h-96 rounded-lg shadow-xl sm:aspect-h-5 sm:aspect-w-4 sm:h-auto"
+                className="group relative lg:h-96 rounded-lg shadow-xl sm:aspect-h-5 sm:aspect-w-4 sm:h-auto aspect-h-1 aspect-w-2 overflow-hidden"
               >
                 <div>
-                  <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-lg">
-                    <div className="absolute inset-0 overflow-hidden transition-all group">
+                  <div aria-hidden="true" className="lg:absolute inset-0 overflow-hidden rounded-lg">
+                    <div className="lg:absolute inset-0 overflow-hidden transition-all group">
                       <Image
                         src={collection.imageSrc}
                         alt={collection.imageAlt}
-                        className="h-full w-full object-cover object-center group-hover:invisible"
+                        className="h-full w-full object-cover object-center group-hover:invisible max-sm:aspect-h-1 max-sm:aspect-w-2 max-sm:overflow-hidden"
                         width={500}
                         height={500}
                       />
                       <Image
                         src={collection.imageSrc2}
                         alt={collection.imageAlt}
-                        className="top-0 h-full w-full object-cover object-center absolute invisible group-hover:visible"
+                        className="top-0 h-full w-full object-cover object-center absolute invisible group-hover:visible max-sm:aspect-h-1 max-sm:aspect-w-2 max-sm:overflow-hidden"
                         width={500}
                         height={500}
                       />
@@ -127,7 +127,7 @@ export default function EcoProducts() {
       </div>
 
       <div className="bg-primary">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 lg:py-16 sm:px-6 sm:py-24 lg:px-8">
           {/* <div className="sm:flex sm:items-baseline sm:justify-between">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>
             <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
