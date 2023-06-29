@@ -12,7 +12,7 @@ const tabs = [
         name: 'Recicla',
         description:
           'No botes tus residuos de cabello, plástico y/o café. Conviértelos en materia prima para fabricar productos de alta calidad.',
-        imageSrc: '/gc1.jpg',
+        imageSrc: '/gc1.png',
         imageAlt: 'Recicla',
       },
     ],
@@ -24,7 +24,7 @@ const tabs = [
         name: 'Gana Puntos',
         description:
           'Entrega tus residuos a través de nuestra app y gana GreenPoints que podrás intercambiar por beneficios con nuestros aliados.',
-        imageSrc: '/gc2.jpg',
+        imageSrc: '/gc2.png',
         imageAlt:
           'Gana Puntos',
       },
@@ -37,7 +37,7 @@ const tabs = [
         name: 'Obtén Beneficios',
         description:
           "Acumula GreenPoints y cambialos por beneficios, descuentos y ofertas en las tiendas de nuestros aliados.",
-        imageSrc: '/gc3.jpg',
+        imageSrc: '/gc3.png',
         imageAlt: 'Obtén Beneficios',
       },
     ],
@@ -49,7 +49,7 @@ const tabs = [
         name: "Salva al Planeta",
         description:
           'Deja menos huella. Al descargar y utilizar nuestra App contribuyes a reducir los efectos causados por la contaminación y el cambio climático.',
-        imageSrc: '/gc4.jpg',
+        imageSrc: '/gc4.png',
         imageAlt: 'Salva al Planeta',
       },
     ],
@@ -131,7 +131,7 @@ export default function AppMobile() {
                         </div>
                         <div className="lg:col-span-7">
                           <div className="aspect-h-1 aspect-w-2 overflow-hidden rounded-lg bg-primary sm:aspect-h-2 sm:aspect-w-3">
-                            <Image src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center" width={100} height={100}/>
+                            <Image src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center" width={696} height={419}/>
                           </div>
                         </div>
                       </div>
