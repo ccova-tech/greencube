@@ -1,6 +1,6 @@
 'use client'
 
-import { usePuntosRecoleccion } from '../registro/(api)/ContextRegistro'
+import { usePuntosRecoleccion } from '../reciclaje/(api)/ContextRegistro'
 import AccionesSolicitar from './(components)/AccionesSolicitar';
 import Map from './(components)/Map';
 
