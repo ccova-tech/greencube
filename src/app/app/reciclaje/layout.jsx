@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { usePuntosDispatch } from '@/app/app/registro/(api)/ContextRegistro';
+import { usePuntosDispatch } from '@/app/app/reciclaje/(api)/ContextRegistro';
 
 export default function RegistroLayout({children}) {
   const dispatch = usePuntosDispatch()
