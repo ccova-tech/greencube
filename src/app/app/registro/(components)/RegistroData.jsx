@@ -40,8 +40,8 @@ export default function RegistroData({dataRegistro, setAgregarNuevo, setUpdateDa
                 <div className='w-16 h-16 mr-4 bg-primary-dark hidden sm:flex justify-center items-center rounded'></div>
                 <div className='flex flex-col'>
                   <h3 className='font-bold text-secondary uppercase'>{item.puntoRecoleccion} - {item.nombre}</h3>
-                  <p className='text-bgcolor'>{item.direccionComuna}. {item.direccionCalle}. {item.direccionNumero}</p>
-                  <p className='text-bgcolor'>Teléfono: +56 {item.telefono}</p>
+                  <p className='text-bgcolor-surface'>{item.direccionComuna}. {item.direccionCalle}. {item.direccionNumero}</p>
+                  <p className='text-bgcolor-surface'>Teléfono: +56 {item.telefono}</p>
                 </div>
               </div>
               <div className='flex gap-4'>

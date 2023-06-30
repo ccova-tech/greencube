@@ -13,7 +13,7 @@ export default function RegistroLayout({children}) {
   }, [])
 
   return (
-    <div>
+    <div className='h-full p-6'>
       {children}
     </div>
   )

@@ -9,7 +9,7 @@ export default function App() {
   const setItemMenu = useContext(MenuContext)
 
   return (
-    <div className='sm:h-full flex flex-wrap justify-center items-center gap-10 sm:bg-primary rounded-lg'>
+    <div className='sm:h-full flex flex-wrap justify-center items-center gap-10 sm:bg-primary'>
 
       <Link href='/app/registro' key='registro' onClick={() => setItemMenu('registro')}>
         <div className='group w-64 h-80 hover:shadow-card transition-all cursor-pointer bg-secondary rounded-lg overflow-hidden border border-solid border-secondary'>

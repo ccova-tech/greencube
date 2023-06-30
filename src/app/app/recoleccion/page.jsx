@@ -9,10 +9,10 @@ function Recoleccion() {
 
   return (
     <div className='h-full overflow-y-auto rounded-lg flex flex-col sm:flex-row sm:gap-6 wrap'>
-      <div className='rounded-lg bg-bgcolor w-full sm:h-full sm:w-96 p-4 sm:overflow-y-auto'>
+      <div className='rounded-lg bg-bgcolor-surface w-full sm:h-full sm:w-96 p-4 sm:overflow-y-auto'>
         <AccionesSolicitar dataPuntos={dataPuntos}/>
       </div>
-      <div className='rounded-lg bg-bgcolor w-full sm:h-full sm:grow sm:overflow-y-auto p-4'>
+      <div className='rounded-lg bg-bgcolor-surface w-full sm:h-full sm:grow sm:overflow-y-auto p-4'>
         <Map address='Tobalaba 1499, 7510330 Providencia, Región Metropolitana' className='h-full' />
       </div>
     </div> 

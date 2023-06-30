@@ -13,7 +13,7 @@ export default function RecoleccionLayout({children}) {
   }, [])
 
   return (
-    <div className='h-full rounded-md'>
+    <div className='h-full rounded-md p-6'>
       {children}
     </div>
   )

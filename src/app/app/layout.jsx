@@ -163,7 +163,8 @@ export default function LayoutApp({
                   </span>
                 {/* <span className='cursor-pointer' onClick={signOut}>{ user ? `Cerrar cuenta ${user.attributes.email}` : null}</span> */}
               </header>
-              <main className='bg-bgcolor-surface sm:h-[calc(100vh-56px)] p-6'>
+              <main className='bg-bgcolor sm:h-[calc(100vh-56px)]'>
+              {/* <main className='bg-primary sm:h-[calc(100vh-56px)] p-6'> */}
                 {children}
               </main>
             </MenuContext.Provider>
